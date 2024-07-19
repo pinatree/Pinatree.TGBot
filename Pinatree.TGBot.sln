@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot", "Pinatree.TGBot\Pinatree.TGBot.csproj", "{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot.Startup", "Pinatree.TGBot\Pinatree.TGBot.Startup.csproj", "{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StartUp", "StartUp", "{47412E22-B165-4BF8-90E9-ACFE2AF05750}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FB9CF5E4-4D21-4953-8527-1E71D46AA515}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectCalculating", "ProjectCalculating", "{A00E462E-8DF2-4241-AE7D-EF491814E6F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B4765193-AE96-4890-B76A-CD92BE4ED6CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{0F3CD3B5-5BBA-47E5-A991-91B928AF96BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telegram", "Telegram", "{9DC8C35B-A4A1-4C7F-A1DE-C6756C3AD4C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot.Core", "Pinatree.TGBot.Core\Pinatree.TGBot.Core.csproj", "{2B046F71-43AB-4ABA-8D88-5598260C4559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot.TGClient", "Pinatree.TGBot.TGClient\Pinatree.TGBot.TGClient.csproj", "{72C15435-481C-489B-9829-6ED806D890A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot.ProjectCalculatingService", "Pinatree.TGBot.ProjectCalculatingService\Pinatree.TGBot.ProjectCalculatingService.csproj", "{10328C8A-3A6D-4456-B1A2-027A99326C43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +33,29 @@ Global
 		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B046F71-43AB-4ABA-8D88-5598260C4559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B046F71-43AB-4ABA-8D88-5598260C4559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B046F71-43AB-4ABA-8D88-5598260C4559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B046F71-43AB-4ABA-8D88-5598260C4559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C15435-481C-489B-9829-6ED806D890A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C15435-481C-489B-9829-6ED806D890A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C15435-481C-489B-9829-6ED806D890A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C15435-481C-489B-9829-6ED806D890A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10328C8A-3A6D-4456-B1A2-027A99326C43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10328C8A-3A6D-4456-B1A2-027A99326C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10328C8A-3A6D-4456-B1A2-027A99326C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10328C8A-3A6D-4456-B1A2-027A99326C43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8} = {47412E22-B165-4BF8-90E9-ACFE2AF05750}
+		{A00E462E-8DF2-4241-AE7D-EF491814E6F0} = {FB9CF5E4-4D21-4953-8527-1E71D46AA515}
+		{9DC8C35B-A4A1-4C7F-A1DE-C6756C3AD4C6} = {0F3CD3B5-5BBA-47E5-A991-91B928AF96BE}
+		{2B046F71-43AB-4ABA-8D88-5598260C4559} = {B4765193-AE96-4890-B76A-CD92BE4ED6CC}
+		{72C15435-481C-489B-9829-6ED806D890A1} = {9DC8C35B-A4A1-4C7F-A1DE-C6756C3AD4C6}
+		{10328C8A-3A6D-4456-B1A2-027A99326C43} = {A00E462E-8DF2-4241-AE7D-EF491814E6F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A79ADA7-A673-419E-8DA4-E399C64225A0}
