@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot", "Pinatree.TGBot\Pinatree.TGBot.csproj", "{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0ACE58-7C4C-4EA6-B175-06F758B53FD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A79ADA7-A673-419E-8DA4-E399C64225A0}
+	EndGlobalSection
+EndGlobal
