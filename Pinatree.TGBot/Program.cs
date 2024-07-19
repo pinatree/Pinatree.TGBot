@@ -1,4 +1,4 @@
-﻿namespace Pinatree.TGBot
+﻿namespace Pinatree.TGBot.Startup
 {
     internal class Program
     {
