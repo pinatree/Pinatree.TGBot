@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Telegram.Bot" Version="19.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Pinatree.TGBot.ProjectCalculatingService\Pinatree.TGBot.ProjectCalculatingService.MoqService.csproj" />
+    <ProjectReference Include="..\Pinatree.TGBot.ProjectCalculatingService.Domain\Pinatree.TGBot.ProjectCalculatingService.Domain.csproj" />
   </ItemGroup>
 
 </Project>
