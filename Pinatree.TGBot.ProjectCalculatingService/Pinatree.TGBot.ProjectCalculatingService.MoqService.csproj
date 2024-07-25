@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pinatree.TGBot.Core\Pinatree.TGBot.Core.csproj" />
+    <ProjectReference Include="..\Pinatree.TGBot.ProjectCalculatingService.Domain\Pinatree.TGBot.ProjectCalculatingService.Domain.csproj" />
   </ItemGroup>
 
 </Project>
