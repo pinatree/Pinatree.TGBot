@@ -6,40 +6,58 @@ using Telegram.Bot.Types;
 using Pinatree.TGBot.IUsersDataService.DataSource;
 using Pinatree.TGBot.ICore.InputHandlers;
 using Pinatree.TGBot.Core.InputHandlers;
-using Pinatree.TGBot.ICore.Responsers.Base;
 using Pinatree.TGBot.DataHandler.IHandler;
 using Pinatree.TGBot.ICore.Responsers.Routers;
-using Pinatree.TGBot.ISender;
 using Pinatree.TGBot.DefaultSender;
+using Pinatree.TGBot.ISender;
+using Pinatree.TGBot.ICore.Responsers.Base;
+using Autofac;
+using Pinatree.TGBot.InMemoryUsersDataService.DataSource;
 
 namespace Pinatree.TGBot.DataHandler.Handler
 {
     public class DefaultDataHandler : IDataHandler
     {
-        IInputHandler messagesHandler;
-
         ITelegramBotClient? _botClient;
         ReceiverOptions? _receiverOptions;
         string _accessToken;
-        IChatsDataSource _chatsDataSource;
 
-        public DefaultDataHandler(string accessToken, IChatsDataSource chatsDataSource)
+        IContainer _innerContainer;
+
+        public DefaultDataHandler(string accessToken)
         {
             _accessToken = accessToken;
-            _chatsDataSource = chatsDataSource;
         }
 
         public async Task RunServe()
         {
+            //Установка с соединением и авторизация
             InitConnection();
 
-            messagesHandler = new InputHandler(_chatsDataSource, new ResponsersFabric(_chatsDataSource, new MessageResponseSender(_botClient)));
+            _innerContainer = BuildDIContainer();
 
-            using var cts = new CancellationTokenSource();
-
-            _botClient?.StartReceiving(UpdateHandler, ErrorHandler, _receiverOptions, cts.Token);
+            _botClient?.StartReceiving(UpdateHandler, ErrorHandler, _receiverOptions);
 
             await Task.Delay(-1);
+        }
+
+        IContainer BuildDIContainer()
+        {
+            //TGBotClient is instance
+            //IChatsDataSource is instance
+            //TGBotClient -> MessageResponseSender
+            //IChatsDataSource, MessageResponseSender -> ResponsersFabric
+            //IChatsDataSource, ResponsersFabric -> InputHandler
+
+            //Создаем контейнер
+            ContainerBuilder builder = new ContainerBuilder();
+            builder.RegisterType<InputHandler>().As<IInputHandler>();
+            builder.RegisterType<ResponsersFabric>().As<IResponsersFabric>();
+            builder.RegisterType<InMemoryChatsDataSource>().As<IChatsDataSource>();
+            builder.RegisterType<MessageResponseSender>().As<IMessageResponseSender>();
+            builder.RegisterInstance(_botClient).As<ITelegramBotClient>();
+
+            return builder.Build();
         }
 
         void InitConnection()
@@ -56,9 +74,12 @@ namespace Pinatree.TGBot.DataHandler.Handler
         {
             try
             {
+                IInputHandler handler = _innerContainer.Resolve<IInputHandler>();
+
                 long chatId = update.Message.Chat.Id;
                 string message = update.Message.Text;
-                await messagesHandler.HandleMessage(chatId, message);
+
+                await handler.HandleMessage(chatId, message);
             }
             catch (Exception ex)
             {
