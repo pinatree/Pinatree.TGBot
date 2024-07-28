@@ -45,9 +45,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IHandler", "IHandler", "{CD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pinatree.TGBot.IDataHandler", "Pinatree.TGBot.IDataHandler\Pinatree.TGBot.IDataHandler.csproj", "{2CE3285A-625F-4EAD-9CFD-E26FDC855579}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot.ISender", "Pinatree.TGBot.ISender\Pinatree.TGBot.ISender.csproj", "{0E180AE8-2429-41E1-BA3D-B68CF1EB401E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pinatree.TGBot.ISender", "Pinatree.TGBot.ISender\Pinatree.TGBot.ISender.csproj", "{0E180AE8-2429-41E1-BA3D-B68CF1EB401E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot.DefaultSender", "Pinatree.TGBot.DefaultSender\Pinatree.TGBot.DefaultSender.csproj", "{72C716A9-F264-4378-B70E-BD86B3BEE568}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pinatree.TGBot.DefaultSender", "Pinatree.TGBot.DefaultSender\Pinatree.TGBot.DefaultSender.csproj", "{72C716A9-F264-4378-B70E-BD86B3BEE568}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApacheCassandraUsersDataService", "ApacheCassandraUsersDataService", "{5FB20CEA-DC9B-46B6-BDD9-2DCC8850DE1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinatree.TGBot.ApacheCassandraUsersDataService", "Pinatree.TGBot.ApacheCassandraUsersDataService\Pinatree.TGBot.ApacheCassandraUsersDataService.csproj", "{4D86340E-424D-44DC-97FE-5204F5AA3BFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +99,10 @@ Global
 		{72C716A9-F264-4378-B70E-BD86B3BEE568}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72C716A9-F264-4378-B70E-BD86B3BEE568}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72C716A9-F264-4378-B70E-BD86B3BEE568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D86340E-424D-44DC-97FE-5204F5AA3BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D86340E-424D-44DC-97FE-5204F5AA3BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D86340E-424D-44DC-97FE-5204F5AA3BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D86340E-424D-44DC-97FE-5204F5AA3BFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +126,8 @@ Global
 		{2CE3285A-625F-4EAD-9CFD-E26FDC855579} = {CDE6EACB-8B6C-4A77-B00E-80A054676BDA}
 		{0E180AE8-2429-41E1-BA3D-B68CF1EB401E} = {8BCCED98-CF59-4FDF-98E2-EA1E161D0111}
 		{72C716A9-F264-4378-B70E-BD86B3BEE568} = {19289511-DA3D-42A0-AA5D-599893EFA6EE}
+		{5FB20CEA-DC9B-46B6-BDD9-2DCC8850DE1F} = {199C02C8-2E45-44E5-887A-3875563B774F}
+		{4D86340E-424D-44DC-97FE-5204F5AA3BFE} = {5FB20CEA-DC9B-46B6-BDD9-2DCC8850DE1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A79ADA7-A673-419E-8DA4-E399C64225A0}
