@@ -8,13 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pinatree.TGBot.Core\Pinatree.TGBot.Core.csproj" />
-    <ProjectReference Include="..\Pinatree.TGBot.DefaultSender\Pinatree.TGBot.DefaultSender.csproj" />
-    <ProjectReference Include="..\Pinatree.TGBot.ICore\Pinatree.TGBot.ICore.csproj" />
-    <ProjectReference Include="..\Pinatree.TGBot.IDataHandler\Pinatree.TGBot.IDataHandler.csproj" />
-    <ProjectReference Include="..\Pinatree.TGBot.InMemoryUsersDataService.Test\Pinatree.TGBot.InMemoryUsersDataService.Test.csproj" />
-    <ProjectReference Include="..\Pinatree.TGBot.InMemoryUsersDataService\Pinatree.TGBot.InMemoryUsersDataService.csproj" />
-    <ProjectReference Include="..\Pinatree.TGBot.IUsersDataService\Pinatree.TGBot.IUsersDataService.csproj" />
     <ProjectReference Include="..\Pinatree.TGBot.TGClient\Pinatree.TGBot.DataHandler.csproj" />
   </ItemGroup>
 

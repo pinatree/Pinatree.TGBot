@@ -1,7 +1,5 @@
 ﻿using Pinatree.TGBot.DataHandler.IHandler;
 using Pinatree.TGBot.DataHandler.Handler;
-using Pinatree.TGBot.InMemoryUsersDataService.DataSource;
-using Pinatree.TGBot.IUsersDataService.DataSource;
 
 namespace Pinatree.TGBot.Startup
 {
@@ -13,9 +11,7 @@ namespace Pinatree.TGBot.Startup
 
             Console.WriteLine("Server initializing...");
 
-            IChatsDataSource dataSource = new InMemoryChatsDataSource();
-
-            IDataHandler client = new DefaultDataHandler(accessToken, dataSource);
+            IDataHandler client = new DefaultDataHandler(accessToken);
 
             await client.RunServe();
         }
