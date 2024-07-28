@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pinatree.TGBot.ICore\Pinatree.TGBot.ICore.csproj" />
+    <ProjectReference Include="..\Pinatree.TGBot.ISender\Pinatree.TGBot.ISender.csproj" />
+    <ProjectReference Include="..\Pinatree.TGBot.IUsersDataService\Pinatree.TGBot.IUsersDataService.csproj" />
+  </ItemGroup>
+
+</Project>
