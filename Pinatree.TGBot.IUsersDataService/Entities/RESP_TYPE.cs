@@ -5,6 +5,7 @@
         MAIN,
         SERVICES,
         FEEDBACK,
-        TECHSUPPORT
+        TECHSUPPORT,
+        WRITE_FEEDBACK_MESSAGE
     }
 }

@@ -2,6 +2,8 @@
 using Pinatree.TGBot.IUsersDataService.Entities;
 using Pinatree.TGBot.ICore.Responsers.Base;
 using Pinatree.TGBot.ISender;
+using Pinatree.TGBot.Core.Responsers.WritingFeedbackMessage;
+using Pinatree.TGBot.ICore.Responsers.Routers;
 
 namespace Pinatree.TGBot.Core.StateResponsers.Main
 {
@@ -12,6 +14,9 @@ namespace Pinatree.TGBot.Core.StateResponsers.Main
             switch (messageText) {
                 case "Назад":
                     await responsersFabric.GetByStateResponser(RESP_TYPE.MAIN).NavTo(chatId, messageText);
+                    return;
+                case "Написать сообщение":
+                    await responsersFabric.GetByStateResponser(RESP_TYPE.WRITE_FEEDBACK_MESSAGE).NavTo(chatId, messageText);
                     return;
                 default:
                     await NavTo(chatId, messageText);
@@ -27,7 +32,7 @@ namespace Pinatree.TGBot.Core.StateResponsers.Main
             {
                 new List<string>
                 {
-                    "Наш адрес",
+                    "Написать сообщение",
                     "Реквизиты ООО",
                 },
                 new List<string>
