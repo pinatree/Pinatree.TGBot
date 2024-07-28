@@ -53,7 +53,7 @@ namespace Pinatree.TGBot.DataHandler.Handler
             ContainerBuilder builder = new ContainerBuilder();
             builder.RegisterType<InputHandler>().As<IInputHandler>();
             builder.RegisterType<ResponsersFabric>().As<IResponsersFabric>();
-            builder.RegisterType<InMemoryChatsDataSource>().As<IChatsDataSource>();
+            builder.RegisterType<ApacheCassandraUsersDataService.ApacheCassandraUsersDataService>().As<IChatsDataSource>();
             builder.RegisterType<MessageResponseSender>().As<IMessageResponseSender>();
             builder.RegisterInstance(_botClient).As<ITelegramBotClient>();
 

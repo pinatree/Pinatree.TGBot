@@ -1,8 +1,7 @@
 {
   "profiles": {
     "Pinatree.TGBot": {
-      "commandName": "Project",
-      "commandLineArgs": "7320815095:AAFBzYCFLnOpRcHO-z72T9lSF8obvC_Fo-0"
+      "commandName": "Project"
     }
   }
 }
