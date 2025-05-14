@@ -1,10 +1,19 @@
-﻿namespace Pinatree.TGBot
+﻿using Pinatree.TGBot.DataHandler.IHandler;
+using Pinatree.TGBot.DataHandler.Handler;
+
+namespace Pinatree.TGBot.Startup
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string accessToken = args[0];
+
+            Console.WriteLine("Server initializing...");
+
+            IDataHandler client = new DefaultDataHandler(accessToken);
+
+            await client.RunServe();
         }
     }
 }
